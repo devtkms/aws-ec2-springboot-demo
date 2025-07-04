@@ -126,6 +126,7 @@ You should see the following response:
 ```bash
 Hello from EC2!
 ```
+<img width="706" alt="Hello from EC2！" src="https://github.com/user-attachments/assets/47d64c9d-6ab1-4e09-b962-6b79e6ee76a9" />
 
 ---
 
