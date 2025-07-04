@@ -30,10 +30,7 @@ This repository documents the full step-by-step process to deploy a simple **Spr
 | Type        | Protocol | Port Range | Source     |
 |-------------|----------|------------|------------|
 | SSH         | TCP      | 22         | 0.0.0.0/0  |
-| HTTP        | TCP      | 80         | 0.0.0.0/0  |
 | Custom TCP  | TCP      | 8080       | 0.0.0.0/0  |
-
-> ⚠️ In production, restrict by IP range for security.
 
 ---
 
@@ -79,7 +76,7 @@ cd <path-to-pem-file>
 chmod 400 aws-ec2-springboot-demo-key.pem
 
 # Connect via SSH
-ssh -i "aws-ec2-springboot-demo-key.pem" ec2-user@<EC2-PUBLIC-IP>
+ssh -i "aws-ec2-springboot-demo-key.pem" ec2-user@<your-ec2-public-dns>
 ````
 
 ### Install Java on EC2
@@ -101,14 +98,14 @@ java -version
 # Run from local terminal (not EC2)
 scp -i aws-ec2-springboot-demo-key.pem \
 build/libs/aws-ec2-springboot-demo-0.0.1-SNAPSHOT.jar \
-ec2-user@<EC2-PUBLIC-IP>:/home/ec2-user/
+ec2-user@<your-ec2-public-dns>:/home/ec2-user/
 ```
 
 ## 4. Run the App on EC2
 
 ```bash
 # SSH into EC2 (if not already connected)
-ssh -i "aws-ec2-springboot-demo-key.pem" ec2-user@<EC2-PUBLIC-IP>
+ssh -i "aws-ec2-springboot-demo-key.pem" ec2-user@<your-ec2-public-dns>
 
 # Run the Spring Boot app
 java -jar aws-ec2-springboot-demo-0.0.1-SNAPSHOT.jar
