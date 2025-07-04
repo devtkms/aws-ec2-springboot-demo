@@ -77,7 +77,7 @@ chmod 400 aws-ec2-springboot-demo-key.pem
 
 # Connect via SSH
 ssh -i "aws-ec2-springboot-demo-key.pem" ec2-user@<your-ec2-public-dns>
-````
+```
 
 ### Install Java on EC2
 
@@ -111,7 +111,17 @@ ssh -i "aws-ec2-springboot-demo-key.pem" ec2-user@<your-ec2-public-dns>
 java -jar aws-ec2-springboot-demo-0.0.1-SNAPSHOT.jar
 ```
 
+## 5. Confirm the Application is Running
 
+Access the application in your browser:
+```bash
+http://<your-ec2-public-ip>:8080/
+```
+
+You should see the following response:
+```bash
+Hello from EC2!
+```
 
 
 
