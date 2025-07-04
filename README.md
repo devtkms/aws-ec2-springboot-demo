@@ -101,6 +101,8 @@ build/libs/aws-ec2-springboot-demo-0.0.1-SNAPSHOT.jar \
 ec2-user@<your-ec2-public-dns>:/home/ec2-user/
 ```
 
+---
+
 ## 4. Run the App on EC2
 
 ```bash
@@ -110,6 +112,8 @@ ssh -i "aws-ec2-springboot-demo-key.pem" ec2-user@<your-ec2-public-dns>
 # Run the Spring Boot app
 java -jar aws-ec2-springboot-demo-0.0.1-SNAPSHOT.jar
 ```
+
+---
 
 ## 5. Confirm the Application is Running
 
@@ -122,6 +126,8 @@ You should see the following response:
 ```bash
 Hello from EC2!
 ```
+
+---
 
 
 
