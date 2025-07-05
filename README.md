@@ -82,9 +82,6 @@ ssh -i "aws-ec2-springboot-demo-key.pem" ec2-user@<your-ec2-public-dns>
 ### Install Java on EC2
 
 ```bash
-# Update package manager
-sudo yum update -y
-
 # Install Amazon Corretto 21 (Java 21)
 sudo yum install java-21-amazon-corretto-headless -y
 
